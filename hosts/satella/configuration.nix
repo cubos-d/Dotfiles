@@ -114,6 +114,7 @@
     fastfetch
     htop
     wezterm
+    brave
   ];
   
   nix.settings.experimental-features = ["nix-command" "flakes"];
