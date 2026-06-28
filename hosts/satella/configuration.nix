@@ -14,17 +14,28 @@
   #boot.loader.systemd-boot.enable = true;
   #boot.loader.efi.canTouchEfiVariables = true;
   console.keyMap = "la-latin1";
+  #boot.loader = {
+  #  efi = {
+  #    canTouchEfiVariables = true;
+  #  };
+  #  grub = {
+  #    enable = true;
+  #    device = "nodev";
+  #    efiSupport = true;
+  #    extraConfig = ''
+  #      set keymap=la
+  #    '';
+  #  };
+  #};
+
   boot.loader = {
     efi = {
       canTouchEfiVariables = true;
     };
-    grub = {
+    systemd-boot = {
       enable = true;
-      device = "nodev";
-      efiSupport = true;
-      extraConfig = ''
-        set keymap=la
-      '';
+      consoleMode = "max";
+      configurationLimit = 15;
     };
   };
 
