@@ -24,9 +24,11 @@
     config.lib.file.mkOutOfStoreSymlink "/home/cubos/dotfiles/users/cubos/waybar/config";
   xdg.configFile."waybar/style.css".source = 
     config.lib.file.mkOutOfStoreSymlink "/home/cubos/dotfiles/users/cubos/waybar/style.css";
-  #xdg.configFile."hypr/hyprland.lua".source = ./hyprland.lua;
-  #xdg.configFile."waybar/config".source = ./waybar/config;
-  #xdg.configFile."waybar/style.css".source = ./waybar/style.css;
+  xdg.configFile."wofi/config".source = 
+    config.lib.file.mkOutOfStoreSymlink "/home/cubos/dotfiles/users/cubos/wofi/config";
+  xdg.configFile."wofi/style.css".source = 
+    config.lib.file.mkOutOfStoreSymlink "/home/cubos/dotfiles/users/cubos/wofi/style.css";
+
 
   # User specific packages go here instead of configuration.nix
   fonts.fontconfig.enable = true;

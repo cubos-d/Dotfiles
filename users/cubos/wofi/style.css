@@ -1,0 +1,36 @@
+* {
+	border-radius: 20px;
+	border: none;
+}
+window {
+	font-size: 18px;
+	font-family: "UbuntuMono Nerd Font";
+	background-color: rgba(20, 0, 40, 0.6);
+	background: linear-gradient(180deg, rgba(40, 0, 90, 0.6), rgba(0, 0, 130, 0.6));
+	color: yellow;
+}
+
+#entry {
+	padding: 10px;
+}
+
+#entry:selected {
+	background-color: rgba(60, 0, 80, 0.6);
+	background: linear-gradient(270deg, rgba(20, 0, 40, 0.6), rgba(40, 10, 10, 0.6));
+}
+
+#text:selected {
+	color: cyan;
+	background-color: rgba(40, 10, 10, 0.6);
+}
+
+#input {
+	padding: 10px;
+	background-color: transparent;
+	color: cyan;
+}
+
+image{
+	margin-left: 5px;
+	margin-right: 5px;
+}
