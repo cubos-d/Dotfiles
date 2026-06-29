@@ -278,7 +278,10 @@ hl.bind(mainMod .. " + CONTROL + left", hl.dsp.window.resize({ x = -20, y = 0, r
 hl.bind(mainMod .. " + CONTROL + up", hl.dsp.window.resize({ x = 0, y = -20, relative = true}), { repeating = true })
 hl.bind(mainMod .. " + CONTROL + down", hl.dsp.window.resize({ x = 0, y = 20, relative = true}), { repeating = true })
 hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.move({ direction = "l" }))
-hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.move({ direction = "l" }))
+hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "r" }))
+hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.move({ direction = "u" }))
+hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.move({ direction = "d" }))
+
 
 
 -- Switch workspaces with mainMod + [0-9]
@@ -365,3 +368,5 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
+hyprland.exec_once("waybar")
