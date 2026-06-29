@@ -10,6 +10,7 @@
 
   # Imports user-specific modular apps
   imports = [
+    ./homedots/bash.nix
   ];
   
   wayland.windowManager.hyprland = {
@@ -45,6 +46,7 @@
     starship
     wlogout
     nerd-fonts.comic-shanns-mono
+    eza
   ];
   
 }
