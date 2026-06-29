@@ -12,6 +12,9 @@
   imports = [
   ];
   
+  wayland.windowManager.hyprland = {
+    enable = true;
+  };
   xdg.configFile."hypr/hyprland.lua".source = ./hyprland.lua;
 
   # User specific packages go here instead of configuration.nix
