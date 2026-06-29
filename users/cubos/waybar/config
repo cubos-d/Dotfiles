@@ -1,0 +1,102 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "left", // Waybar at the bottom of your screen
+    //"height": 1080, // Waybar height
+	"margin-left": 5,
+	"margin-right": 5,
+	"margin-top": 5,
+	"margin-bottom": 5,
+    // "width": 1366, // Waybar width
+    // Choose the order of the modules
+    //"modules-center": ["hyprland/window"],
+    "modules-left": ["custom/start", "hyprland/workspaces"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "tray", "clock", "custom/void"],
+    "hyprland/workspaces": {
+		"persistent-workspaces": {
+			"*":10
+		},
+        "disable-scroll": true,
+        "format": "{icon}",
+        "format-icons": {	
+            "1": "",
+            "2": "󰌀",
+            "3": "",
+            "4": "",
+            "5": "󱡞",
+            "6": "",
+            "7": "󰄻",
+			"8": "󰊴",
+			"9": "󰙯",
+			"10": "", // 󰭄  󰙯        󰊴  󱍢    󰄻      󱀤       󱡞  󰚝    󰌀 
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+    "hyprland/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+		"format": "{:%H:%M}",
+        "format-alt": "{:%Y \nM: %m\nD: %d}"
+    },
+    "cpu": {
+        "format": "\n\n{usage}%"
+    },
+    "memory": {
+        "format": "\n\n{}%\n"
+    },
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        // "interface": "wlp2s0", // (Optional) To force the use of this interface
+        "format-wifi": " \n{signalStrength}%",
+        "format-ethernet": "",
+        "format-disconnected": "⚠"
+    },
+    "pulseaudio": {
+        //"scroll-step": 1,
+        "format": "\n{icon}\n{volume}%\n",
+        "format-bluetooth": "\n{icon}\n{volume}%\n",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/spotify": {
+        "format": " {}",
+        "max-length": 40,
+        "interval": 30, // Remove this if your script is endless and write in loop
+        "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null", // Script in resources folder
+        "exec-if": "pgrep spotify"
+    },
+	"custom/void": {
+		"format": "\n"
+	},
+	"custom/start": {
+		"format": "\n\n",
+		"icon-size": 30,
+		"on-click": "wlogout --protocol layer-shell" 
+	}
+}

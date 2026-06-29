@@ -16,6 +16,8 @@
     enable = true;
   };
   xdg.configFile."hypr/hyprland.lua".source = ./hyprland.lua;
+  xdg.configFile."waybar/config".source = ./waybar/config;
+  xdg.configFile."waybar/style.css".source = ./waybar/style.css;
 
   # User specific packages go here instead of configuration.nix
   home.packages = with pkgs; [
@@ -29,6 +31,7 @@
     fastfetch
     htop
     starship
+    wlogout
   ];
   
   fonts.packages = with pkgs; [
