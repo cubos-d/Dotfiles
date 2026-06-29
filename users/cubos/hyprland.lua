@@ -123,9 +123,14 @@ hl.config({
             enabled   = true,
             size      = 3,
             passes    = 2,
+	    new_optimizations = true,
             vibrancy  = 0.1696,
 	    vibrancy_darkness = 1,
         },
+
+	glow = {
+	    enabled = true,
+	},	
     },
 
     animations = {
@@ -369,3 +374,9 @@ hl.window_rule({
     float = true,
 })
 
+hl.layer_rule({ match = { namespace = "waybar" }, blur = true })
+hl.layer_rule({
+  match        = { namespace = "wofi" },
+  blur         = true,
+  ignore_alpha = 0.5,
+})
