@@ -17,7 +17,7 @@
   };
   # Change this line in your home.nix to reference the absolute physical path
   xdg.configFile."hypr/hyprland.lua".source = 
-    config.lib.file.mkOutOfStoreSymlink "/home/cubos/dotfiles/users/cubos/hyprland.lua";
+    config.lib.file.mkOutOfStoreSymlink "/home/cubos/dotfiles/users/cubos/hyprland/hyprland.lua";
     
   # Do the same for your waybar configs if you are actively tweaking them
   xdg.configFile."waybar/config".source = 
