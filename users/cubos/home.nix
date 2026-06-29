@@ -20,6 +20,7 @@
   xdg.configFile."waybar/style.css".source = ./waybar/style.css;
 
   # User specific packages go here instead of configuration.nix
+  fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     # Any personal apps can live here safely separated from root
     btop
@@ -32,9 +33,7 @@
     htop
     starship
     wlogout
-  ];
-  
-  fonts.packages = with pkgs; [
     nerd-fonts.comic-shanns-mono
   ];
+  
 }
