@@ -11,6 +11,7 @@
   # Imports user-specific modular apps
   imports = [
     ./homedots/bash.nix
+    ./homedots/python-stuff.nix
   ];
   
   wayland.windowManager.hyprland = {
