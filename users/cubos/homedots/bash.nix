@@ -18,6 +18,8 @@
       export HSA_ENABLE_SDMA=0
       export ROCM_ENABLE_LOGGING=1
       export AMD_SERIALIZE_KERNEL=3
+      export UV_PYTHON=3.14
+      export KERAS_BACKEND="torch"
       eval "$(starship init bash)"
     '';
   };
