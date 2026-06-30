@@ -37,8 +37,6 @@
   # User specific packages go here instead of configuration.nix
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
-    python314
-    python314Packages.numpy
     btop
     wezterm
     wofi
