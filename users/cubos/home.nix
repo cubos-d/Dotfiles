@@ -51,6 +51,7 @@
     nerd-fonts.comic-shanns-mono
     eza
     starship
+    discord
   ];
   
 }
