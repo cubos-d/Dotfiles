@@ -16,7 +16,7 @@
       zlib
       openssl
       libffi
-      
+      stdenv.cc.cc 
       # Additional libraries helpful for ML/Data-Science utilities
       gcc-unwrapped.lib
     ];
